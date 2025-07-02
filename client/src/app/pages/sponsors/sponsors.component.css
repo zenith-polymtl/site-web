@@ -1,0 +1,99 @@
+.section-dark {
+      padding: 80px 0 100px;
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.section-cream {
+    padding: 120px 0;
+    margin-top: -60px;
+}
+
+.sponsors-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.sponsor-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.sponsor-item:nth-child(1) { height: 140px; margin-top: 100px; }
+.sponsor-item:nth-child(2) { height: 160px; margin-top: 50px; }
+.sponsor-item:nth-child(3) { height: 180px; margin-top: -20px; }
+.sponsor-item:nth-child(4) { height: 180px; margin-top: -20px; }
+.sponsor-item:nth-child(5) { height: 160px; margin-top: -50px; }
+.sponsor-item:nth-child(6) { height: 140px; margin-top: -100px; }
+
+.sponsor-item img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.section-dark-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 150px 0 80px;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -60px;
+}
+
+@media (max-width: 900px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sponsor-item {
+        height: 160px !important;
+        margin-top: 20px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .section-dark {
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        padding-bottom: 80px;
+    }
+
+    .section-dark-bottom {
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsor-item {
+        margin-top: 20px !important;
+    }
+}

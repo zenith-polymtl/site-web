@@ -1,0 +1,71 @@
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: '/certs'
+
+.client-cache: &client-cache
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - client/node_modules/
+
+.only-main: &only-main
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+
+stages:
+  - build
+  - deploy
+
+build:server:
+  stage: build
+  <<: *only-main
+  image: docker
+  services:
+    - name: docker:dind
+      alias: docker
+  variables:
+    CI_REGISTRY_IMAGE_SERVER: $CI_REGISTRY_IMAGE/server
+  before_script:
+    - cd server
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $CI_REGISTRY_IMAGE_SERVER || true
+  script:
+    - docker build --pull -t $CI_REGISTRY_IMAGE_SERVER .
+    - docker push $CI_REGISTRY_IMAGE_SERVER
+
+deploy:client:
+  stage: deploy
+  <<: [*client-cache, *only-main]
+  image: node:lts-alpine
+  before_script:
+    - cd client
+    - npm install -g @angular/cli
+    - npm ci --cache
+  script:
+    - ng build --configuration production --base-href "/"
+    - mkdir ../public
+    - mv dist/client/* ../public
+  artifacts:
+    paths:
+      - public
+
+deploy:server:
+  stage: deploy
+  <<: *only-main
+  needs:
+    - build:server
+  image: curlimages/curl
+  script: 'curl -H "Authroziation: Bearer $SERVER_DEPLOY_TOKEN" $SERVER_DEPLOY_URL'
+  
+pages:
+  stage: deploy
+  needs:
+    - job: deploy:client
+  script:
+    - echo "Deploying GitLab Pages"
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+

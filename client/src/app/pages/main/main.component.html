@@ -1,0 +1,148 @@
+<div class="zenith-header">
+  <div class="header-text dark-blue yellow-text small-zigzag-bottom">
+    <h1>{{'HOME.TITLE' | translate}}</h1>
+    <h2>{{'HOME.SUBTITLE' | translate}}</h2>
+    <p>{{'HOME.FOUNDED' | translate}}</p>
+  </div>
+
+  <div class="events-container">
+  <h2 class="dark-blue-text">{{ 'HOME.EVENTS' | translate }}</h2>
+
+  <table class="events-table">
+    <thead class="dark-blue orange-text">
+      <tr>
+        <th>{{ 'HOME.EVENT_NAME' | translate }}</th>
+        <th>{{ 'HOME.EVENT_DATE' | translate }}</th>
+        <th>{{ 'HOME.EVENT_LOCATION' | translate }}</th>
+      </tr>
+    </thead>
+    <tbody class="dark-blue-text">
+    @for (event of events; track event.id) {
+      <tr>
+        <td>{{ event.properties.name }}</td>
+        <td>{{ event.properties.date }}</td>
+        <td>{{ event.properties.location }}</td>
+      </tr>
+    }
+    </tbody>
+  </table>
+</div>
+  <div class="logo-grid">
+    <img src="assets/main1.png" alt="Logo" class="grid-logo">
+    <img src="assets/main2.jpeg" alt="Logo" class="grid-logo">
+    <img src="assets/main3.jpeg" alt="Logo" class="grid-logo">
+    <img src="assets/main4.jpeg" alt="Logo" class="grid-logo">
+  </div>
+
+  <app-crash-countdown></app-crash-countdown>
+
+  <div class="image-drone">
+    <img src="assets/drone1.png" alt="Logo" class="grid-logo">
+    <button class="text-roll" routerLink='/projects'>
+      <span class="text-container">{{ 'HOME.LEARN_MORE' | translate }}</span>
+      <span class="text-clone">{{ 'HOME.LEARN_MORE' | translate }}</span>
+    </button>
+  </div>
+
+  <!-- Dans votre template HTML (.html) -->
+  <div class="faq-section purple dark-blue-text">
+    <h2 class="faq-title">{{ 'HOME.FAQ' | translate }}</h2>
+
+    <div class="faq-item">
+      <div class="faq-question" (click)="toggleFaq($event)">
+        <span>{{ 'HOME.Q_REJOINDRE_ZENITH' | translate }}</span>
+        <span class="faq-arrow">
+          <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"></path>
+          </svg>
+        </span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          RÉPONSE
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" (click)="toggleFaq($event)">
+        <span>{{ 'HOME.Q_DO_I_NEED_EXPERIENCE' | translate }}</span>
+        <span class="faq-arrow">
+          <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"></path>
+          </svg>
+        </span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          RÉPONSE
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" (click)="toggleFaq($event)">
+        <span>{{ 'HOME.Q_TIME_COMMITMENT' | translate }}</span>
+        <span class="faq-arrow">
+          <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"></path>
+          </svg>
+        </span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          RÉPONSE
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" (click)="toggleFaq($event)">
+        <span>{{ 'HOME.Q_WHAT_CAN_ZENITH_BRING_ME' | translate }}</span>
+        <span class="faq-arrow">
+          <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"></path>
+          </svg>
+        </span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          RÉPONSE
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" (click)="toggleFaq($event)">
+        <span>{{ 'HOME.Q_HOW_SUPPORT_ZENITH' | translate }}</span>
+        <span class="faq-arrow">
+          <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"></path>
+          </svg>
+        </span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          RÉPONSE
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" (click)="toggleFaq($event)">
+        <span>{{ 'HOME.Q_HOW_BECOME_SPONSOR' | translate }}</span>
+        <span class="faq-arrow">
+          <svg width="30" height="30" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"></path>
+          </svg>
+        </span>
+      </div>
+      <div class="faq-answer">
+        <div class="faq-answer-content">
+          RÉPONSE
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

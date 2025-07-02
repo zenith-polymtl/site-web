@@ -1,0 +1,38 @@
+ <div class="full-background"></div>
+
+    <div class="gallery-container">
+      <div class="gallery-grid" #galleryGrid>
+        @for (brick of bricks(); track brick.data.src) {
+          <div
+            class="gallery-item"
+            [style.left.px]="brick.position.x"
+            [style.top.px]="brick.position.y"
+            [style.width.px]="brick.position.width"
+            [style.height.px]="brick.position.height"
+            [style.animation-delay]="brick.position.delay + 's'"
+            (click)="openLightbox(brick.data, $index)">
+
+            <img [src]="brick.data.src" [alt]="brick.data.title" loading="lazy">
+
+            <div class="image-overlay">
+              <div class="image-title">{{brick.data.title}}</div>
+            </div>
+
+            <div class="size-info">{{brick.data.ratio | number:'1.2-2'}}</div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    @if (lightboxActive()) {
+      <div class="lightbox active" (click)="closeLightbox()">
+        <span class="close-btn" (click)="closeLightbox()">&times;</span>
+        <div class="nav-btn prev" (click)="navigateImage(-1); $event.stopPropagation()">‹</div>
+        <div class="nav-btn next" (click)="navigateImage(1); $event.stopPropagation()">›</div>
+        <img
+          [src]="currentImage().src"
+          [alt]="currentImage().title"
+          (click)="$event.stopPropagation()">
+      </div>
+    }

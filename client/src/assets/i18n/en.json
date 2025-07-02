@@ -1,0 +1,81 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "TEAM": "Team",
+    "PROJECTS": "Projects",
+    "PARTNERS": "Partners",
+    "GALLERY": "Gallery",
+    "JOIN_TEAM": "Join the Team"
+  },
+  "HOME": {
+    "TITLE": "Zenith",
+    "SUBTITLE": "Technical society specialized in drones and aircraft at Polytechnique Montreal",
+    "FOUNDED": "Founded in 2024",
+    "LEARN_MORE": "Learn more",
+    "EVENTS": "Upcoming events",
+    "EVENT_NAME": "Name",
+    "EVENT_DATE": "Date",
+    "EVENT_LOCATION": "Location",
+    "FAQ": "Frequently Asked Questions",
+    "Q_REJOINDRE_ZENITH": "How do I join Zenith ?",
+    "Q_DO_I_NEED_EXPERIENCE": "Do I need experience to join Zenith ?",
+    "Q_TIME_COMMITMENT": "By joining Zenith, what is the time commitment expected and what am I to do ?",
+    "Q_WHAT_CAN_ZENITH_BRING_ME": "Why should I join Zenith ?",
+    "Q_HOW_SUPPORT_ZENITH": "How can I support the team ?",
+    "Q_HOW_BECOME_SPONSOR": "How can I become a sponsor ?"
+
+
+  },
+  "CRASH":{
+    "MESSAGE": "...since the last crash",
+    "DAYS": "Days",
+    "HOURS": "Hours",
+    "SECONDS": "Seconds"
+  },
+  "TEAM": {
+    "SUBTITLE": "Executives and Team Leaders ",
+    "TITLE": "Our Team",
+    "DESCRIPTION": "The faces of Zenith",
+    "TEAM_DESCRIPTION": "Team Description",
+    "AND": " and",
+    "TEAM_LEAD": "Team Leader(s)"
+  },
+
+  "JOIN": {
+    "TITLE": "Join The Zenith Team",
+    "DESCRIPTION": "Launch aerospace innovation to new heights"
+  },
+  "PROJECTS": {
+    "TITLE": "Our Projects",
+    "DESCRIPTION": "Zenith's innovative drones"
+  },
+  "SPONSORS": {
+    "TITLE": "Our Sponsors",
+    "DESCRIPTION": "Zenith's Esteemed Partners",
+    "SUBTITLE": "Thank you to our incredible sponsors for making this possible",
+    "BUTTON": "Sponsor Us"
+  },
+  "GALLERY": {
+    "TITLE": "Gallery",
+    "DESCRIPTION": "Highlights of our team"
+  },
+  "CONTACT": {
+    "INTRODUCTION": "<strong>Zenith</strong>, the leading technical society in drones and aircraft at Polytechnique Montreal, believes that technical excellence and audacity build the future. Founded in 2024, our team pushes the boundaries of aerospace technologies – and we want <strong>you</strong> by our side to go even further.",
+    "WHY": "WHY ZENITH ?",
+    "BENEFIT-TITLE": "A challenge taylored for you",
+    "BENEFIT-DESCRIPTION": "Conception, prototyping, piloting… Here, each project is an opportunity to grow technically and leave your mark.",
+    "BENEFIT-TITLE2": "A team that aims for the skies",
+    "BENEFIT-DESCRIPTION2": "Collaboration, sharing of expertise and competitive spirit to excel in competitions and real projects.",
+    "BENEFIT-TITLE3": "Learning and polyvalence",
+    "BENEFIT-DESCRIPTION3": "Access to cutting-edge tools (CAD, drones, workshops) and the freedom to innovate on autonomous systems, embedded AI, or aerodynamics.",
+    "RESEARCH-STUDENTS": "We are looking for students that are: ",
+    "MOTIVATED-1": "<strong>Motivated</strong> to get out of their comfort zone",
+    "MOTIVATED-2": "<strong>Curious</strong> to learn and share",
+    "MOTIVATED-3": "<strong>Demanding</strong> of themselves and the team",
+    "MOTIVATED-4": "<strong>Passionate</strong> about drones, aerospace, or cutting-edge technologies",
+    "DISCIPLINE": " No matter your program (mechanical engineering, electrical engineering, software engineering, or other) if you are eager for <strong>progress</strong> and <strong>impact</strong>, you have a place here.",
+    "CONTACT_US": "Ready to take off with us ?",
+    "JOIN": "Join a passionate team and contribute to the future of aerospace",
+    "JOIN_TEAM": "Join Team"
+  }
+}

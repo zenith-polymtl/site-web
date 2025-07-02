@@ -1,0 +1,157 @@
+<div class="crash-countdown-container zigzag">
+  <div class="time-display">
+    <!-- Days -->
+    <div class="time-unit">
+      <div class="content">
+        <div>
+          <div class="flip">
+            <div class="up">
+              <div>{{days}}</div>
+            </div>
+            <div class="down">
+              <div>
+                <div>{{previousDays}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flip-card">
+            <div class="flip-card-inner" [@flip]="days" (@flip.done)="previousDays = days">
+              <div class="flip-card-front">
+                <div class="up">
+                  <div>{{previousDays}}</div>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="down">
+                  <div>
+                    <div>{{days}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="label">{{ 'CRASH.DAYS' | translate }}</span>
+    </div>
+
+    <span class="time-separator">:</span>
+
+    <div class="time-unit">
+      <div class="content">
+        <div>
+          <div class="flip">
+            <div class="up">
+              <div>{{hours}}</div>
+            </div>
+            <div class="down">
+              <div>
+                <div>{{previousHours}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flip-card">
+            <div class="flip-card-inner" [@flip]="hours" (@flip.done)="previousHours = hours">
+              <div class="flip-card-front">
+                <div class="up">
+                  <div>{{previousHours}}</div>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="down">
+                  <div>
+                    <div>{{hours}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="label">{{ 'CRASH.HOURS' | translate }}</span>
+    </div>
+
+    <span class="time-separator" id="toRemove">:</span>
+
+    <!-- Minutes -->
+    <div class="time-unit">
+      <div class="content">
+        <div>
+          <div class="flip">
+            <div class="up">
+              <div>{{minutes}}</div>
+            </div>
+            <div class="down">
+              <div>
+                <div>{{previousMinutes}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flip-card">
+            <div class="flip-card-inner" [@flip]="minutes" (@flip.done)="previousMinutes = minutes">
+              <div class="flip-card-front">
+                <div class="up">
+                  <div>{{previousMinutes}}</div>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="down">
+                  <div>
+                    <div>{{minutes}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="label">Minutes</span>
+    </div>
+
+    <span class="time-separator">:</span>
+
+    <!-- Seconds -->
+    <div class="time-unit">
+      <div class="content">
+        <div>
+          <div class="flip">
+            <div class="up">
+              <div>{{seconds}}</div>
+            </div>
+            <div class="down">
+              <div>
+                <div>{{previousSeconds}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flip-card">
+            <div class="flip-card-inner" [@flip]="seconds" (@flip.done)="previousSeconds = seconds">
+              <div class="flip-card-front">
+                <div class="up">
+                  <div>{{previousSeconds}}</div>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="down">
+                  <div>
+                    <div>{{seconds}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="label">{{ 'CRASH.SECONDS' | translate }}</span>
+    </div>
+  </div>
+  <h2 style="color:white">{{ 'CRASH.MESSAGE' | translate }}</h2>
+</div>

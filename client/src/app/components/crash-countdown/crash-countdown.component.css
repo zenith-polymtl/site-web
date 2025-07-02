@@ -1,0 +1,148 @@
+.crash-countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #091c2a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  left: 0;
+  right: 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: 100vw;
+}
+
+.time-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 90px;
+}
+
+.time-separator {
+  font-size: 64px;
+  line-height: 80px;
+  margin: 0 15px;
+  font-weight: 600;
+  color: #ffffff;
+  align-self: center;
+}
+
+.content {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  /* Suppression du transform qui causait le problème */
+}
+
+.flip {
+  position: absolute;
+  height: 90px;   /* augmenté */
+  width: 90px;    /* augmenté */
+  border-radius: 6px;
+}
+
+.up,
+.down {
+  text-align: center;
+  height: 45px;   /* moitié de .flip */
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.up > div,
+.down > div {
+  font-size: 70px;          /* augmenté */
+  font-weight: 800;
+  line-height: 90px;        /* égal à la hauteur totale de .flip */
+  align-self: center;
+}
+
+.down > div > div {
+  margin-top: -45px;        /* moitié de .flip */
+}
+
+.flip-card {
+  perspective: 300px;
+  position: absolute;
+  height: 45px;   /* moitié de .flip */
+  width: 90px;    /* même largeur que .flip */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transform-origin: 50% 100%;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.flip-card-front,
+.up {
+  background-color: #c55e3d;
+  color: white;
+}
+
+.flip-card-back,
+.down {
+  background-color: #c55e3d;
+  color: white;
+}
+
+.flip-card-back {
+  transform: rotateX(180deg);
+}
+
+.up {
+  border-bottom: 1px solid #444; /* ligne séparatrice */
+}
+
+.time-separator {
+  font-size: 60px;
+  vertical-align: top;
+  margin: 0 10px;
+}
+
+.label {
+  color: white;
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  #toRemove {
+    display: none;
+  }
+  .time-unit {
+    width: 100px;
+    padding-left: 10px;
+  }
+}

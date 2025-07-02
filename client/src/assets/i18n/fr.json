@@ -1,0 +1,82 @@
+{
+  "HEADER": {
+    "HOME": "Accueil",
+    "TEAM": "L'Équipe",
+    "PROJECTS": "Projets",
+    "PARTNERS": "Commanditaires",
+    "GALLERY": "Galerie",
+    "JOIN_TEAM": "Joindre l'équipe"
+  },
+  "HOME": {
+    "TITLE": "Zenith",
+    "SUBTITLE": "Société technique spécialisée en drones et aéronefs à Polytechnique Montréal",
+    "FOUNDED": "Fondée en 2024",
+    "FAQ": "Question fréquentes",
+    "EVENTS": "Événements à venir",
+    "EVENT_NAME": "Nom",
+    "EVENT_DATE": "Date",
+    "EVENT_LOCATION": "Emplacement",
+    "LEARN_MORE": "En apprendre plus",
+    "Q_REJOINDRE_ZENITH": "Comment rejoindre Zenith ?",
+    "Q_DO_I_NEED_EXPERIENCE": "Est-ce que j'ai besoin d'expérience pour rejoindre l'équipe ?",
+    "Q_TIME_COMMITMENT": "En rejoignant l'équipe je vais faire quoi et combien de temps dois-je investir ?",
+    "Q_WHAT_CAN_ZENITH_BRING_ME": "Qu'est-ce que Zenith va m'apporter si je rejoins ?",
+    "Q_HOW_SUPPORT_ZENITH": "Comment supporter l'équipe ?",
+    "Q_HOW_BECOME_SPONSOR": "Comment est-ce que je peux devenir commanditaire ?"
+  },
+
+  "CRASH":{
+    "MESSAGE": "...depuis le dernier crash",
+    "DAYS": "Jours",
+    "HOURS": "Heures",
+    "MINUTES": "Minutes",
+    "SECONDS": "Secondes"
+  },
+
+  "TEAM": {
+    "SUBTITLE": "Exécutif et chefs d'équipes ",
+    "TITLE": "Notre équipe",
+    "DESCRIPTION": "Les visages de Zenith",
+    "TEAM_DESCRIPTION": "Description de l'équipe",
+    "AND": " et",
+    "TEAM_LEAD": "Chef(s) d'équipe"
+  },
+
+  "JOIN": {
+    "TITLE": "Rejoins l'Équipe Zenith",
+    "DESCRIPTION": "Propulse l'innovation aérospatiale vers de nouveaux sommets"
+  },
+  "PROJECTS": {
+    "TITLE": "Nos Projets",
+    "DESCRIPTION": "Les drônes innovatifs"
+  },
+  "SPONSORS": {
+    "TITLE": "Nos Commanditaires",
+    "DESCRIPTION": "Les partenaires de notre société",
+    "SUBTITLE": "Merci à nos commanditaires",
+    "BUTTON": "Nous Commanditer"
+  },
+  "GALLERY": {
+    "TITLE": "Galerie",
+    "DESCRIPTION": "Moments marquants de notre équipe"
+  },
+  "CONTACT": {
+    "WHY": "POURQUOI ZENITH ?",
+    "INTRODUCTION": "<strong>Zenith</strong>, la société technique de référence en drones et aéronefs à Polytechnique Montréal, croit que l'excellence technique et l'audace construisent l'avenir. Fondée en 2024, notre équipe repousse les limites des technologies aérospatiales – et nous voulons <strong>vous</strong> à nos côtés pour aller encore plus loin.",
+    "BENEFIT-TITLE": "Un défi sur mesure pour vous",
+    "BENEFIT-DESCRIPTION": "Conception, prototypage, pilotage… Ici, chaque projet est une opportunité de grandir techniquement et de laisser votre empreinte.",
+    "BENEFIT-TITLE2": "Une équipe qui vise les cieux",
+    "BENEFIT-DESCRIPTION2": "Collaboration, partage d'expertise et esprit de compétition pour exceller dans les compétitions et les projets réels.",
+    "BENEFIT-TITLE3": "Apprentissage et polyvalence",
+    "BENEFIT-DESCRIPTION3": "Accès à des outils de pointe (CAO, drones, ateliers) et liberté d'innover sur des systèmes autonomes, IA embarquée ou aérodynamique.",
+    "RESEARCH-STUDENTS": "Nous recherchons des étudiants qui sont : ",
+    "MOTIVATED-1": "<strong>Motivés</strong> à sortir de leur zone de confort",
+    "MOTIVATED-2": "<strong>Curieux</strong> d'apprendre et de partager",
+    "MOTIVATED-3": "<strong>Exigeants</strong> envers eux-mêmes et l'équipe",
+    "MOTIVATED-4": "<strong>Passionnés</strong> par les drones, l'aérospatiale ou les technologies de pointe",
+    "DISCIPLINE": " Peu importe votre programme (génie mécanique, électrique, logiciel ou autre) si vous avez soif de <strong>progrès</strong> et d'<strong>impact</strong>, vous avez votre place ici.",
+    "CONTACT_US": "Prêt à décoller avec nous ?",
+    "JOIN": "Rejoindre une équipe passionnée et contribuer à l'avenir de l'aérospatiale",
+    "JOIN_TEAM": "Rejoindre l'équipe"
+  }
+}

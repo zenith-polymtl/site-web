@@ -1,0 +1,115 @@
+@if (this.teams.length !== 0) {
+  <div class="container">
+
+    <div class="header-team yellow-text dark-blue">
+      <p> {{'TEAM.SUBTITLE' | translate }}
+        <span class="dropdown-container dark-blue inline-dropdown">
+          <select class="year-dropdown yellow-text inline" (change)="onYearChange($event)">
+            @for (team of teams; track team.year; let i = $index) {
+              <option class="yellow-text" [value]="i" [selected]="i === selectedTeamIndex">{{ team.year }}</option>
+            }
+          </select>
+        </span>
+      </p>
+    </div>
+
+    <div class="container-team-photo small-zigzag zigzag-imbrique">
+      <div class="team-photo">
+        <img [src]="teams[selectedTeamIndex].teamPictureUrl" alt="Photo d'équipe Zenith">
+      </div>
+    </div>
+
+    <div class="roles-container">
+      @for (role of teams[selectedTeamIndex].directionRoles; track role.roleName; let i = $index) {
+        @if (i % 2 === 0 || i === teams[selectedTeamIndex].directionRoles.length - 1) {
+          <div class="roles-row">
+            <div class="role-section">
+              <div class="role-title">
+                {{ role.roleName }}
+              </div>
+              <div class="member-names">
+                @for (member of role.members; track member.name; let i = $index; let last = $last) {
+                  {{ member.name }}
+                  @if (!last) {
+                    {{ i === role.members.length - 2 ? ('TEAM.AND' | translate) : ', ' }}
+                  }
+                }
+              </div>
+              <div class="profile-container profile-pair">
+                @for (member of role.members; track member.name) {
+                  <div class="profile-card">
+                    <div class="profile-image">
+                      <img [src]="member.pictureUrl" [alt]="member.name">
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+
+            @if (i + 1 < teams[selectedTeamIndex].directionRoles.length && i % 2 === 0) {
+              <div class="role-section">
+                <div class="role-title">
+                  {{ teams[selectedTeamIndex].directionRoles[i + 1].roleName }}
+                </div>
+                <div class="member-names">
+                  @for (member of role.members; track member.name; let i = $index; let last = $last) {
+                    {{ member.name }}
+                    @if (!last) {
+                      {{ i === role.members.length - 2 ? ('TEAM.AND' | translate) : ', ' }}
+                    }
+                  }
+                </div>
+                <div class="profile-container profile-pair">
+                  @for (member of teams[selectedTeamIndex].directionRoles[i + 1].members; track member.name) {
+                    <div class="profile-card">
+                      <div class="profile-image">
+                        <img [src]="member.pictureUrl" [alt]="member.name">
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        }
+      }
+    </div>
+    @for (teamRole of teams[selectedTeamIndex].teamRoles; track teamRole.roleName; let i = $index) {
+      <div class="team-presentation" [ngClass]="getTeamColorClass(i)">
+
+        <div class="team-presentation-row">
+          <div class="team-info-section">
+            <div class="team-name">{{ teamRole.roleName }}</div>
+            <div class="team-leaders">
+              <div class="leader-container">
+                @for (member of teamRole.members; track member.name) {
+                  <div class="leader-photo">
+                    <img [src]="member.pictureUrl" [alt]="member.name">
+                  </div>
+                }
+                <div class="leader-info">
+                  <div class="leader-name">
+                    @for (member of teamRole.members; track member.name; let i = $index; let last = $last) {
+                      {{ member.name }}
+                      @if (!last) {
+                        {{ i === teamRole.members.length - 2 ? ('TEAM.AND' | translate) : ', ' }}
+                      }
+                    }
+                  </div>
+                  <div class="leader-title">{{ 'TEAM.TEAM_LEAD' | translate }} {{ teamRole.roleName.toLowerCase() }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-description-section">
+            <div class="team-description-title">{{ 'TEAM.TEAM_DESCRIPTION' | translate }}</div>
+            <div class="team-description-content">
+              {{ getTeamDescription(teamRole.roleName) }}
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+}

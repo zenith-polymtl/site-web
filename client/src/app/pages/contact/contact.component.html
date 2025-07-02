@@ -1,0 +1,64 @@
+<div class="recruitment-container">
+  <div class="intro divider-bottom dark-blue purple-text small-zigzag-bottom">
+    <br><br><br>
+    <p [innerHTML]="'CONTACT.INTRODUCTION' | translate "></p>
+  </div>
+
+  <section class="section section-why cream">
+    <h2 class="section-title">{{'CONTACT.WHY' | translate}}</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3 class="benefit-title">{{'CONTACT.BENEFIT-TITLE' | translate}}</h3>
+        <p class="benefit-description">
+          {{'CONTACT.BENEFIT-DESCRIPTION' | translate}}
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3 class="benefit-title">{{'CONTACT.BENEFIT-TITLE2' | translate}}</h3>
+        <p class="benefit-description">
+          {{'CONTACT.BENEFIT-DESCRIPTION2' | translate}}
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3 class="benefit-title">{{'CONTACT.BENEFIT-TITLE3' | translate}}</h3>
+        <p class="benefit-description">
+          {{'CONTACT.BENEFIT-DESCRIPTION3' | translate}}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-requirements divider purple small-zigzag">
+    <h3 class="requirements-title">{{'CONTACT.RESEARCH-STUDENTS' | translate}}</h3>
+    <div class="requirements-grid">
+      <div class="requirement-item">
+        <span class="requirement-text" [innerHTML]="'CONTACT.MOTIVATED-1' | translate"></span>
+      </div>
+      <div class="requirement-item">
+        <span class="requirement-text" [innerHTML]="'CONTACT.MOTIVATED-2' | translate"></span>
+      </div>
+      <div class="requirement-item">
+        <span class="requirement-text" [innerHTML]="'CONTACT.MOTIVATED-3' | translate"></span>
+      </div>
+      <div class="requirement-item">
+        <span class="requirement-text" [innerHTML]="'CONTACT.MOTIVATED-4' | translate"></span>
+      </div>
+    </div>
+    <p class="requirements-title note" [innerHTML]="'CONTACT.DISCIPLINE' | translate"></p>
+  </section>
+
+  <section class="section section-cta cream">
+    <div class="cta-content">
+      <h2 class="cta-title">{{'CONTACT.CONTACT_US' | translate}}</h2>
+      <p class="cta-subtitle">
+        {{'CONTACT.JOIN' | translate}}
+      </p>
+      <button class="text-roll" (click)="redirectToForm()">
+          <span class="text-container">{{'CONTACT.JOIN_TEAM' | translate}}</span>
+          <span class="text-clone">{{'CONTACT.JOIN_TEAM' | translate}}</span>
+      </button>
+    </div>
+  </section>
+</div>

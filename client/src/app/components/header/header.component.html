@@ -1,0 +1,83 @@
+<div class="site-header" id="siteHeader">
+  <div class="header-background">
+      @if (route === '/join') {
+          <img src="assets/back_hoodie.png" alt="Header Background" id="parallaxImage">
+      } @else if (route === '/team') {
+          <img src="assets/main1.png" alt="Header Background" id="parallaxImage">
+      } @else if (route === '/sponsors') {
+          <img src="assets/dos_soleil.png" alt="Header Background" id="parallaxImage">
+      } @else if (route === '/projects') {
+        <img src="assets/main4.jpeg" alt="Header Background" id="parallaxImage">
+      } @else if (route === '/gallery') {
+        <img src="assets/pablo_nico.png" alt="Header Background" id="parallaxImage">
+      } @else {
+          <img src="assets/header.jpeg" alt="Header Background" id="parallaxImage">
+      }
+  </div>
+  <div class="header-overlay"></div>
+      <div class="header-logo" id="headerLogo">
+       @if (route === '/join') {
+         <h1>{{ 'JOIN.TITLE' | translate }}</h1>
+          <p class="subtitle">{{ 'JOIN.DESCRIPTION' | translate }}</p>
+       } @else if (route === '/team') {
+        <h1>{{ 'TEAM.TITLE' | translate }}</h1>
+         <p class="subtitle">{{ 'TEAM.DESCRIPTION' | translate }}</p>
+      } @else if (route === '/projects') {
+        <h1>{{ 'PROJECTS.TITLE' | translate }}</h1>
+         <p class="subtitle">{{ 'PROJECTS.DESCRIPTION' | translate }}</p>
+      } @else if (route === '/sponsors') {
+        <h1>{{ 'SPONSORS.TITLE' | translate }}</h1>
+         <p class="subtitle">{{ 'SPONSORS.DESCRIPTION' | translate }}</p>
+      } @else if (route === '/gallery') {
+        <h1>{{ 'GALLERY.TITLE' | translate }}</h1>
+         <p class="subtitle">{{ 'GALLERY.DESCRIPTION' | translate }}</p>
+      } @else {
+            <img src="assets/inverse-logo.png" alt="Logo">
+       }
+  </div>
+
+  <div class="mobile-nav">
+    <img src="assets/inverse-logo.png" alt="Zenith Logo" class="mobile-logo">
+    <app-language-switcher></app-language-switcher>
+    <button
+      class="hamburger"
+      (click)="toggleMobileMenu()"
+      [attr.aria-expanded]="isMobileMenuOpen"
+      aria-label="Menu mobile"
+      aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+    role="dialog"
+    [class.open]="isMobileMenuOpen">
+    <button class="close-btn" (click)="toggleMobileMenu()" aria-label="Fermer le menu">×</button>
+    <ul class="mobile-menu-links">
+      <li><a routerLink="/" (click)="toggleMobileMenu()">{{'HEADER.HOME' | translate }}</a></li>
+      <li><a routerLink="/team" (click)="toggleMobileMenu()">{{ 'HEADER.TEAM' | translate }}</a></li>
+      <li><a routerLink="/projects" (click)="toggleMobileMenu()">{{ 'HEADER.PROJECTS' | translate }}</a></li>
+      <li><a routerLink="/join" (click)="toggleMobileMenu()">{{ 'HEADER.JOIN_TEAM' | translate }}</a></li>
+      <li><a routerLink="/sponsors" (click)="toggleMobileMenu()">{{ 'HEADER.PARTNERS' | translate }}</a></li>
+      <li><a routerLink="/gallery" (click)="toggleMobileMenu()">{{ 'HEADER.GALLERY' | translate }}</a></li>
+    </ul>
+  </div>
+
+  <div class="header-nav" id="headerNav">
+    <div class="nav-container">
+      <ul class="main-nav" id="mainNav">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">{{'HEADER.HOME' | translate }}</a></li>
+        <li><a routerLink="/team" routerLinkActive="active" class="nav-link">{{'HEADER.TEAM' | translate }}</a></li>
+        <li><a routerLink="/projects" routerLinkActive="active" class="nav-link">{{'HEADER.PROJECTS' | translate }}</a></li>
+        <li><a routerLink="/join" routerLinkActive="active" class="nav-link">{{'HEADER.JOIN_TEAM' | translate }}</a></li>
+        <li><a routerLink="/sponsors" routerLinkActive="active" class="nav-link">{{'HEADER.PARTNERS' | translate }}</a></li>
+        <li><a routerLink="/gallery" routerLinkActive="active" class="nav-link">{{'HEADER.GALLERY' | translate }}</a></li>
+      </ul>
+      <div class="language-switcher-wrapper">
+        <app-language-switcher></app-language-switcher>
+      </div>
+    </div>
+  </div>
+</div>
